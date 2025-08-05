@@ -1,5 +1,7 @@
 "use client";
 
+import type React from "react";
+
 import { TestimonialCard } from "@/components/testimonial-card";
 
 const testimonials = [
@@ -61,7 +63,15 @@ const duplicatedTestimonials = [
 export function MarqueeTestimonials() {
   return (
     <div className="relative overflow-hidden mask-testimonials py-4">
-      <div className="flex animate-marquee hover:pause space-x-8">
+      <div
+        className="flex animate-marquee space-x-8"
+        style={
+          {
+            "--gap": "2rem", // Corresponds to space-x-8
+            "--duration": "30s", // Adjust duration as needed
+          } as React.CSSProperties
+        }
+      >
         {duplicatedTestimonials.map((testimonial, index) => (
           <TestimonialCard
             key={index}
