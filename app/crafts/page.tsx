@@ -1,32 +1,42 @@
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Navigation from "@/components/navigation"
-import { Heart, Gift, Sparkles } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Navigation from "@/components/navigation";
+import { Heart, Gift, Sparkles } from "lucide-react";
 
 export default function CraftsPage() {
   const features = [
     {
       icon: <Heart className="h-8 w-8 text-pink-500" />,
       title: "Handmade with Love",
-      description: "Each piece is carefully crafted by hand with attention to every detail.",
+      description:
+        "Each piece is carefully crafted by hand with attention to every detail.",
     },
     {
       icon: <Gift className="h-8 w-8 text-pink-500" />,
       title: "Perfect Gifts",
-      description: "Unique and thoughtful gifts for special occasions and loved ones.",
+      description:
+        "Unique and thoughtful gifts for special occasions and loved ones.",
     },
     {
       icon: <Sparkles className="h-8 w-8 text-pink-500" />,
       title: "Custom Designs",
-      description: "We can create custom designs to match your specific preferences.",
+      description:
+        "We can create custom designs to match your specific preferences.",
     },
-  ]
+  ];
 
   const products = [
     {
       name: "Wire Flower Bouquet",
-      description: "Beautiful everlasting flower bouquets made from colorful fuzzy wire",
+      description:
+        "Beautiful everlasting flower bouquets made from colorful fuzzy wire",
       price: "₱299 - ₱599 (Save ₱100 vs competitors)",
       image: "/placeholder.svg?height=250&width=250",
     },
@@ -42,7 +52,7 @@ export default function CraftsPage() {
       price: "₱199 - ₱399 (Limited Edition)",
       image: "/placeholder.svg?height=250&width=250",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -53,21 +63,25 @@ export default function CraftsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Handmade Wire Crafts That Last Forever</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Handmade Wire Crafts That Last Forever
+              </h1>
               <p className="text-xl mb-8">
-                🌟 BESTSELLER ALERT! Our fuzzy wire bouquets never wilt and make perfect gifts that show you care. Over
-                2,000 happy customers can't be wrong! Custom designs available with 48-hour turnaround.
+                🌟 BESTSELLER ALERT! Our fuzzy wire bouquets never wilt and make
+                perfect gifts that show you care. Over 2,000 happy customers
+                can't be wrong! Custom designs available with 48-hour
+                turnaround.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" variant="secondary">
-                  🛒 Order Now - Free Shipping Over ₱500
+                  🌸 Pre-Order Now
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="text-white border-white hover:bg-white hover:text-pink-500 bg-transparent"
                 >
-                  💬 Get Custom Quote in 2 Hours
+                  📞 +63 926 084 0938
                 </Button>
               </div>
             </div>
@@ -101,7 +115,9 @@ export default function CraftsPage() {
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardDescription className="text-base">
+                    {feature.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -113,13 +129,20 @@ export default function CraftsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Products</h2>
-            <p className="text-lg text-gray-600">Browse our collection of handmade wire crafts</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Products
+            </h2>
+            <p className="text-lg text-gray-600">
+              Browse our collection of handmade wire crafts
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="overflow-hidden hover:shadow-lg transition-shadow"
+              >
                 <CardHeader className="p-0">
                   <Image
                     src={product.image || "/placeholder.svg"}
@@ -131,9 +154,13 @@ export default function CraftsPage() {
                 </CardHeader>
                 <CardContent className="p-6">
                   <CardTitle className="text-xl mb-2">{product.name}</CardTitle>
-                  <CardDescription className="text-gray-600 mb-4">{product.description}</CardDescription>
+                  <CardDescription className="text-gray-600 mb-4">
+                    {product.description}
+                  </CardDescription>
                   <div className="flex justify-between items-center">
-                    <span className="text-lg font-semibold text-pink-600">{product.price}</span>
+                    <span className="text-lg font-semibold text-pink-600">
+                      {product.price}
+                    </span>
                     <Button>Order Now</Button>
                   </div>
                 </CardContent>
@@ -150,8 +177,9 @@ export default function CraftsPage() {
             ⏰ Ready to Order? Limited Slots Available This Week!
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Don't wait! We only accept 20 custom orders per week to ensure quality. Secure your spot today and get FREE
-            consultation worth ₱500!
+            Don't wait! We only accept 20 custom orders per week to ensure
+            quality. Secure your spot today and get FREE consultation worth
+            ₱500!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-pink-500 hover:bg-pink-600">
@@ -164,5 +192,5 @@ export default function CraftsPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

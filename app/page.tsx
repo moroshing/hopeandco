@@ -16,35 +16,35 @@ import { MarqueeTestimonials } from "@/components/marquee-testimonials";
 export default function HomePage() {
   const products = [
     {
-      title: "Fuzzy Wire Crafts",
+      title: "Dreamy Hope Mini Donuts",
       description:
-        "Beautiful handmade wire bouquets and keychains crafted with love and attention to detail.",
-      image: "/placeholder.svg?height=300&width=400",
-      href: "/crafts",
-      color: "from-pink-500 to-rose-500",
-    },
-    {
-      title: "Fresh Donuts",
-      description:
-        "Delicious, freshly made donuts with a variety of flavors and toppings to satisfy your cravings.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Delicious, customizable mini donuts in a variety of flavors and toppings. Perfect for special events and celebrations.",
+      image: "/assets/images/dreamy.png",
       href: "/donuts",
       color: "from-amber-500 to-orange-500",
     },
     {
-      title: "Pinoy Delicacies",
+      title: "Hopeful Delights",
       description:
-        "Authentic Filipino delicacies made with traditional recipes and the finest ingredients.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Homemade Filipino favorites made with love and tradition. From kakanin to savory and affordable snacks, just like home.",
+      image: "/assets/images/hopeful.png",
       href: "/delicacies",
       color: "from-emerald-500 to-teal-500",
     },
     {
-      title: "Printing Services",
+      title: "FleurKraft",
       description:
-        "Professional printing solutions for all your business and personal needs with quality results.",
-      image: "/placeholder.svg?height=300&width=400",
-      href: "/printing",
+        "Beautiful handmade wire bouquets, keychains, and DIY craft kits. All crafted with love and attention to detail.",
+      image: "/assets/images/fleur.png",
+      href: "/crafts",
+      color: "from-pink-500 to-rose-500",
+    },
+    {
+      title: "WebKraft by Moro",
+      description:
+        "Custom, responsive, and SEO-optimized websites for personal brands and small businesses.",
+      image: "/assets/images/webkraft.png",
+      href: "/webdev",
       color: "from-blue-500 to-indigo-500",
     },
   ];
@@ -70,10 +70,9 @@ export default function HomePage() {
             Welcome to Hope & Co.
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Transform your ideas into reality with our premium handmade crafts,
-            delicious treats, authentic Filipino delicacies, and professional
-            printing services. Join 5,000+ satisfied customers who trust <br />
-            Hope & Co.!
+            Transform your ideas into reality with our handmade crafts, mini
+            donuts, Filipino delicacies, and custom websites. Trusted by a
+            growing community of happy customers
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
@@ -108,7 +107,7 @@ export default function HomePage() {
               What Our Customers Say
             </h2>
             <p className="text-gray-600">
-              Join thousands of happy customers who love CraftHub!
+              Join thousands of happy customers who love Hope & Co.!
             </p>
           </div>
           <MarqueeTestimonials />
@@ -123,8 +122,8 @@ export default function HomePage() {
               Choose Your Perfect Product & Order Today
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              From custom wire crafts to fresh donuts - we deliver quality
-              products that exceed expectations. 99% customer satisfaction rate!
+              From crafts to websites to delicious local treats — discover
+              something special with Hope & Co.
             </p>
           </div>
 
@@ -151,7 +150,7 @@ export default function HomePage() {
                 <CardContent>
                   <Link href={product.href}>
                     <Button className="w-full bg-orange-500 hover:bg-orange-600">
-                      Order Now - Free Quote
+                      View Products
                     </Button>
                   </Link>
                 </CardContent>
@@ -166,7 +165,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
             {/* Company Info / NAP */}
-            <div>
+            <div className="">
               <h3 className="text-xl font-bold mb-4">Contact Us</h3>
               <p className="text-gray-400 mb-2 flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-gray-500" />
@@ -182,16 +181,16 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Services */}
+            {/* Products */}
             <div>
-              <h3 className="text-xl font-bold mb-4">Our Services</h3>
-              <ul className="space-y-2">
+              <h3 className="text-xl font-bold mb-4">Our Products</h3>
+              <ul className="pl-4 space-y-2">
                 <li>
                   <Link
                     href="/crafts"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Fuzzy Wire Crafts
+                    Dreamy Hope Mini Donuts
                   </Link>
                 </li>
                 <li>
@@ -199,7 +198,7 @@ export default function HomePage() {
                     href="/donuts"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Fresh Donuts
+                    Hopeful Delights
                   </Link>
                 </li>
                 <li>
@@ -207,15 +206,15 @@ export default function HomePage() {
                     href="/delicacies"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Pinoy Delicacies
+                    FleurKraft
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/printing"
+                    href="/webdev"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
-                    Printing Services
+                    WebKraft
                   </Link>
                 </li>
               </ul>
@@ -224,7 +223,7 @@ export default function HomePage() {
             {/* Service Locations */}
             <div>
               <h3 className="text-xl font-bold mb-4">Service Locations</h3>
-              <ul className="space-y-2">
+              <ul className="pl-4 space-y-2">
                 {serviceLocations.map((location, index) => (
                   <li key={index}>
                     <Link
@@ -241,7 +240,7 @@ export default function HomePage() {
             <div>
               <h3 className="text-xl font-bold mb-4">Recent Blogs</h3>{" "}
               {/* Changed title */}
-              <ul className="space-y-2">
+              <ul className="pl-4 space-y-2">
                 {recentBlogPosts.map((post, index) => (
                   <li key={index}>
                     <Link

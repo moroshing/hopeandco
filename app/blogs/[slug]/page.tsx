@@ -11,9 +11,9 @@ type BlogPostPageProps = {
   };
 };
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = params;
-  const post = getBlogPostBySlug(slug); // Use the imported function
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug); // Use the imported function
 
   if (!post) {
     return (

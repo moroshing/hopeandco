@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import Navigation from "@/components/navigation";
 import { Heart, Users, Award, Target, Star, Clock } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
   const values = [
@@ -63,9 +65,9 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { number: "5000+", label: "Happy Customers" },
-    { number: "15000+", label: "Products Created" },
-    { number: "8", label: "Years in Business" },
+    { number: "200+", label: "Happy Customers" },
+    { number: "500+", label: "Orders Delivered" },
+    { number: "2", label: "Years in Business" },
     { number: "99%", label: "Customer Satisfaction" },
   ];
 
@@ -79,7 +81,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                About CraftHub
+                About Hope & Co.
               </h1>
               <p className="text-xl mb-8">
                 We're more than just a business – we're a family of passionate
@@ -87,13 +89,26 @@ export default function AboutPage() {
                 life through our handcrafted products and professional services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  onClick={() =>
+                    document
+                      .getElementById("our-story-section")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
                   Our Story
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="text-white border-white hover:bg-white hover:text-purple-600 bg-transparent"
+                  onClick={() =>
+                    document
+                      .getElementById("meet-our-team-section")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
                   Meet Our Team
                 </Button>
@@ -131,7 +146,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-20">
+      <section className="py-20" id="our-story-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -149,25 +164,27 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  Hope & Co. began in 2021 as a small home-based business with a
-                  simple dream: to create beautiful, high-quality products that
-                  bring joy to people's lives. What started as Maria's passion
-                  project for wire crafts has grown into a comprehensive
-                  creative hub.
+                  It all began in 2023, when Faith started Dreamy Hope Mini
+                  Donuts, a small business she hoped would help support her
+                  college expenses. She began selling delicious mini donuts
+                  around her neighborhood in Minglanilla, quickly earning the
+                  community’s love for her sweet creations.
                 </p>
                 <p>
-                  Over the years, we've expanded our offerings to include fresh
-                  donuts, authentic Filipino delicacies, and professional
-                  printing services. Each addition to our family of services
-                  came from listening to our customers and understanding their
-                  needs.
+                  However, Faith soon realized mini donuts have seasons of
+                  sales—some months are good, and there are months when she has
+                  no orders. But her passion didn't stop her. Since she was a
+                  college student, she made snacks and sold them on her campus,
+                  and that's when Hopeful Delights began. Every monthly event,
+                  she envisioned as an opportunity to make sales, and so she
+                  started FleurKraft to offer handcrafted gifts like fuzzy wire
+                  keychains, and bouquets.
                 </p>
                 <p>
-                  Today, we're proud to serve thousands of customers across
-                  Metro Manila and beyond, but we've never forgotten our roots.
-                  Every product is still made with the same care, attention to
-                  detail, and love that Maria put into her very first wire
-                  bouquet.
+                  And in 2025, with her partner Kyle, a web developer, they
+                  collaborated to create Hope & Co.—a shared brand that brings
+                  together all their ideas, passion, and creativity under one
+                  name.
                 </p>
               </div>
               <div className="mt-8">
@@ -215,7 +232,7 @@ export default function AboutPage() {
       </section>
 
       {/* Meet Our Team */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" id="meet-our-team-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -299,23 +316,29 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Work With Us?
+            Make Every Moment More Meaningful 🎁
           </h2>
           <p className="text-xl mb-8">
-            Join thousands of satisfied customers who trust Hope & Co. for their
-            creative needs. Let's bring your ideas to life!
+            From custom mini donuts to handcrafted keepsakes and printed
+            creations — we turn ordinary moments into heartfelt memories.
+            Discover the perfect gift for your loved ones or elevate your next
+            celebration with Hope & Co.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
-              Get Started Today
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-white border-white hover:bg-white hover:text-purple-600 bg-transparent text-lg px-8"
-            >
-              Contact Our Team
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" variant="secondary" className="text-lg px-8">
+                Buy Our Products
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-white border-white hover:bg-white hover:text-purple-600 bg-transparent text-lg px-8"
+              >
+                Customize Your Order
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

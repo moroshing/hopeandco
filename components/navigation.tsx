@@ -19,32 +19,32 @@ export default function Navigation() {
 
   const productCategories = [
     {
-      title: "Fuzzy Wire Crafts",
+      title: "Dreamy Hope Mini Donuts",
       description:
-        "Beautiful handmade wire bouquets and keychains crafted with love.",
-      href: "/crafts",
-      icon: "🌸",
-    },
-    {
-      title: "Fresh Donuts",
-      description:
-        "Delicious, freshly made donuts with a variety of flavors and toppings.",
+        "Delicious, customizable mini donuts for special events and sweet cravings.",
       href: "/donuts",
       icon: "🍩",
     },
     {
-      title: "Pinoy Delicacies",
+      title: "Hopeful Delights",
       description:
-        "Authentic Filipino delicacies made with traditional recipes.",
+        "Homemade Filipino kakanin, savory treats, and affordable snacks made with love.",
       href: "/delicacies",
-      icon: "🇵🇭",
+      icon: "🍱",
     },
     {
-      title: "Printing Services",
+      title: "FleurKraft",
       description:
-        "Professional printing solutions for all your business and personal needs.",
-      href: "/printing",
-      icon: "🖨️",
+        "Handcrafted wire bouquets, keychains, and DIY kits with thoughtful details.",
+      href: "/crafts",
+      icon: "🌸",
+    },
+    {
+      title: "WebKraft",
+      description:
+        "Custom, responsive, SEO-optimized websites for personal brands and small businesses.",
+      href: "/webdev",
+      icon: "💻",
     },
   ];
 
