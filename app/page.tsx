@@ -40,7 +40,7 @@ export default function HomePage() {
       color: "from-pink-500 to-rose-500",
     },
     {
-      title: "WebKraft by Moro",
+      title: "WebKraft",
       description:
         "Custom, responsive, and SEO-optimized websites for personal brands and small businesses.",
       image: "/assets/images/webkraft.png",
